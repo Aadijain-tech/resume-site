@@ -1,0 +1,185 @@
+/* Responsive Styles */
+
+/* Mobile styles (up to 767px) */
+@media (max-width: 767px) {
+    /* Typography adjustments */
+    h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    h2 {
+        font-size: var(--font-size-2xl);
+    }
+
+    h3 {
+        font-size: var(--font-size-large);
+    }
+
+    /* Container padding */
+    .container {
+        padding: 0 var(--spacing-4);
+    }
+
+    /* Navigation */
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        padding: var(--spacing-4) 0;
+        border-top: 1px solid var(--gray-200);
+        box-shadow: var(--shadow-md);
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: block;
+        padding: var(--spacing-3) 0;
+        border-radius: 0;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    /* Hero section */
+    .hero-section {
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: var(--spacing-16);
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: var(--spacing-3);
+    }
+
+    /* About section */
+    .about-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Experience section */
+    .experience-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact section */
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Section spacing */
+    section {
+        padding: var(--spacing-12) 0;
+    }
+}
+
+/* Tablet styles (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Typography adjustments */
+    h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    /* About section */
+    .about-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Experience section */
+    .experience-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Contact section */
+    .contact-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Larger screens (1024px and above) */
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-8);
+    }
+
+    .about-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .experience-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Special adjustments for very small screens */
+@media (max-width: 370px) {
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .name {
+        font-size: var(--font-size-2xl);
+    }
+
+    .title {
+        font-size: var(--font-size-medium);
+    }
+
+    .tagline {
+        font-size: var(--font-size-base);
+    }
+}
+
+/* Print styles */
+@media print {
+    .header {
+        position: static;
+        box-shadow: none;
+    }
+
+    .hero-section {
+        padding-top: var(--spacing-8);
+    }
+
+    section {
+        padding: var(--spacing-8) 0;
+        page-break-inside: avoid;
+    }
+
+    .card,
+    .about-card,
+    .skill-card,
+    .contact-card {
+        box-shadow: none;
+        border: 1px solid var(--gray-300);
+    }
+
+    .footer {
+        background-color: transparent;
+        color: var(--gray-900);
+    }
+}

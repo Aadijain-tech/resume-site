@@ -1,0 +1,322 @@
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--light-color);
+    position: relative;
+    overflow: hidden;
+    padding-top: 120px;
+    padding-bottom: var(--spacing-24);
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto var(--spacing-8);
+    border: 5px solid var(--primary-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: var(--font-size-4xl);
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-2);
+}
+
+.title {
+    font-size: var(--font-size-xl);
+    color: var(--gray-600);
+    font-weight: 500;
+    margin-bottom: var(--spacing-4);
+}
+
+.tagline {
+    font-size: var(--font-size-large);
+    color: var(--gray-700);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-8);
+}
+
+.hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-4);
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--gray-100);
+    padding: var(--spacing-20) 0;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
+}
+
+.about-card {
+    background-color: white;
+    padding: var(--spacing-6);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-medium);
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-card h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-3);
+}
+
+.about-card p {
+    color: var(--gray-700);
+    margin-bottom: 0;
+}
+
+/* Experience Section */
+.experience-section {
+    padding: var(--spacing-20) 0;
+}
+
+.experience-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-6);
+}
+
+/* Skills Section */
+.skills-section {
+    background-color: var(--gray-100);
+    padding: var(--spacing-20) 0;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-6);
+}
+
+.skill-card {
+    background-color: white;
+    padding: var(--spacing-6);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card h3 {
+    margin-bottom: var(--spacing-4);
+}
+
+.skill-level {
+    display: inline-block;
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.skill-card.advanced .skill-level {
+    background-color: rgba(5, 150, 105, 0.1);
+    color: var(--secondary-color);
+}
+
+.skill-card.beginner .skill-level {
+    background-color: rgba(234, 88, 12, 0.1);
+    color: var(--accent-color);
+}
+
+/* Education Section */
+.education-section {
+    padding: var(--spacing-20) 0;
+}
+
+.education-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-6);
+}
+
+/* Awards Section */
+.awards-section {
+    background-color: var(--gray-100);
+    padding: var(--spacing-20) 0;
+}
+
+.awards-list {
+    list-style-type: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.awards-list li {
+    padding: var(--spacing-4);
+    margin-bottom: var(--spacing-4);
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    padding-left: var(--spacing-8);
+}
+
+.awards-list li::before {
+    content: "🏆";
+    position: absolute;
+    left: var(--spacing-3);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Languages Section */
+.languages-section {
+    padding: var(--spacing-20) 0;
+}
+
+.languages-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-4);
+    justify-content: center;
+}
+
+.language-badge {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-3) var(--spacing-6);
+    border-radius: var(--border-radius-full);
+    font-weight: 500;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast);
+}
+
+.language-badge:hover {
+    transform: translateY(-3px);
+}
+
+/* Hobbies Section */
+.hobbies-section {
+    background-color: var(--gray-100);
+    padding: var(--spacing-20) 0;
+}
+
+.hobbies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-4);
+    justify-content: center;
+}
+
+.hobby-badge {
+    background-color: var(--accent-color);
+    color: white;
+    padding: var(--spacing-3) var(--spacing-6);
+    border-radius: var(--border-radius-full);
+    font-weight: 500;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast);
+}
+
+.hobby-badge:hover {
+    transform: translateY(-3px);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: var(--spacing-20) 0;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-6);
+}
+
+.contact-card {
+    background-color: white;
+    padding: var(--spacing-6);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: transform var(--transition-medium);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-light);
+    margin: 0 auto var(--spacing-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contact-icon::before {
+    font-size: var(--font-size-2xl);
+    color: white;
+}
+
+.phone-icon::before {
+    content: "📱";
+}
+
+.email-icon::before {
+    content: "✉️";
+}
+
+.youtube-icon::before {
+    content: "▶️";
+}
+
+.location-icon::before {
+    content: "📍";
+}
+
+.contact-card h3 {
+    margin-bottom: var(--spacing-2);
+}
+
+.contact-card p,
+.contact-card a {
+    color: var(--gray-700);
+}
+
+.contact-card a {
+    display: inline-block;
+    padding: var(--spacing-1) var(--spacing-3);
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius-md);
+    transition: background-color var(--transition-fast);
+}
+
+.contact-card a:hover {
+    background-color: var(--primary-dark);
+}
